@@ -4,75 +4,76 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Light mode (fallback) */
-  --background: #0f0f1a;
-  --foreground: #e8e8f0;
-  --card: #1a1a2e;
-  --card-foreground: #e8e8f0;
-  --popover: #1a1a2e;
-  --popover-foreground: #e8e8f0;
-  --primary: #00d4ff;
-  --primary-foreground: #0f0f1a;
-  --secondary: #0066cc;
-  --secondary-foreground: #e8e8f0;
-  --muted: #2d2d4a;
-  --muted-foreground: #888899;
-  --accent: #00ffff;
-  --accent-foreground: #0f0f1a;
-  --destructive: #ff3333;
+  /* Lumora — light blue & white theme, keyed to the logo's #19A4EE */
+  --background: #ffffff;
+  --foreground: #0b2035;
+  --card: #ffffff;
+  --card-foreground: #0b2035;
+  --popover: #ffffff;
+  --popover-foreground: #0b2035;
+  --primary: #19a4ee;
+  --primary-foreground: #ffffff;
+  --secondary: #0b2a4a;
+  --secondary-foreground: #ffffff;
+  --muted: #eaf6fd;
+  --muted-foreground: #5c7a93;
+  --accent: #5ec4f5;
+  --accent-foreground: #0b2035;
+  --destructive: #ff4d4d;
   --destructive-foreground: #fff;
-  --border: #2d2d4a;
-  --input: #16162b;
-  --ring: #00d4ff;
-  --chart-1: #00d4ff;
-  --chart-2: #0066cc;
-  --chart-3: #00ffff;
-  --chart-4: #0099ff;
-  --chart-5: #00ccff;
-  --radius: 0.625rem;
-  --sidebar: #1a1a2e;
-  --sidebar-foreground: #e8e8f0;
-  --sidebar-primary: #00d4ff;
-  --sidebar-primary-foreground: #0f0f1a;
-  --sidebar-accent: #00ffff;
-  --sidebar-accent-foreground: #0f0f1a;
-  --sidebar-border: #2d2d4a;
-  --sidebar-ring: #00d4ff;
+  --border: #dcecfa;
+  --input: #eaf6fd;
+  --ring: #19a4ee;
+  --chart-1: #19a4ee;
+  --chart-2: #0b2a4a;
+  --chart-3: #5ec4f5;
+  --chart-4: #8fd7fb;
+  --chart-5: #0e6fa8;
+  --radius: 1.1rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0b2035;
+  --sidebar-primary: #19a4ee;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #5ec4f5;
+  --sidebar-accent-foreground: #0b2035;
+  --sidebar-border: #dcecfa;
+  --sidebar-ring: #19a4ee;
 }
 
 .dark {
-  --background: #0f0f1a;
-  --foreground: #e8e8f0;
-  --card: #1a1a2e;
-  --card-foreground: #e8e8f0;
-  --popover: #1a1a2e;
-  --popover-foreground: #e8e8f0;
-  --primary: #00d4ff;
-  --primary-foreground: #0f0f1a;
-  --secondary: #0066cc;
-  --secondary-foreground: #e8e8f0;
-  --muted: #2d2d4a;
-  --muted-foreground: #888899;
-  --accent: #00ffff;
-  --accent-foreground: #0f0f1a;
-  --destructive: #ff3333;
+  /* Kept identical to :root — Lumora ships one light identity for now */
+  --background: #ffffff;
+  --foreground: #0b2035;
+  --card: #ffffff;
+  --card-foreground: #0b2035;
+  --popover: #ffffff;
+  --popover-foreground: #0b2035;
+  --primary: #19a4ee;
+  --primary-foreground: #ffffff;
+  --secondary: #0b2a4a;
+  --secondary-foreground: #ffffff;
+  --muted: #eaf6fd;
+  --muted-foreground: #5c7a93;
+  --accent: #5ec4f5;
+  --accent-foreground: #0b2035;
+  --destructive: #ff4d4d;
   --destructive-foreground: #fff;
-  --border: #2d2d4a;
-  --input: #16162b;
-  --ring: #00d4ff;
-  --chart-1: #00d4ff;
-  --chart-2: #0066cc;
-  --chart-3: #00ffff;
-  --chart-4: #0099ff;
-  --chart-5: #00ccff;
-  --sidebar: #1a1a2e;
-  --sidebar-foreground: #e8e8f0;
-  --sidebar-primary: #00d4ff;
-  --sidebar-primary-foreground: #0f0f1a;
-  --sidebar-accent: #00ffff;
-  --sidebar-accent-foreground: #0f0f1a;
-  --sidebar-border: #2d2d4a;
-  --sidebar-ring: #00d4ff;
+  --border: #dcecfa;
+  --input: #eaf6fd;
+  --ring: #19a4ee;
+  --chart-1: #19a4ee;
+  --chart-2: #0b2a4a;
+  --chart-3: #5ec4f5;
+  --chart-4: #8fd7fb;
+  --chart-5: #0e6fa8;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0b2035;
+  --sidebar-primary: #19a4ee;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #5ec4f5;
+  --sidebar-accent-foreground: #0b2035;
+  --sidebar-border: #dcecfa;
+  --sidebar-ring: #19a4ee;
 }
 
 @theme inline {
@@ -126,47 +127,45 @@
 }
 
 @layer utilities {
-  .glow-cyan {
-    @apply shadow-lg shadow-cyan-500/50;
-  }
-  
   .glow-blue {
-    @apply shadow-lg shadow-blue-500/50;
+    @apply shadow-lg shadow-[#19a4ee]/30;
   }
-  
-  .gradient-cyber {
-    @apply bg-gradient-to-r from-primary via-accent to-secondary;
+
+  .gradient-lumora {
+    @apply bg-gradient-to-r from-primary to-accent;
   }
-  
+
   .text-glow {
-    @apply drop-shadow-lg drop-shadow-cyan-500/50;
+    @apply drop-shadow-lg drop-shadow-[#19a4ee]/30;
   }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(0, 212, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.5);
-  }
-}
-
-.pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-16px);
   }
 }
 
 .float {
   animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.float-slow {
+  animation: float-slow 8s ease-in-out infinite;
 }
 
 @keyframes slide-in {

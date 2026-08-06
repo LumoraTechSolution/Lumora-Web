@@ -43,16 +43,14 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-card/50 border-t border-border mt-20">
+    <footer className="bg-muted border-t border-border mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-background font-bold">
-                L
-              </div>
+              <img src="/logo.png" alt="Lumora Technologies logo" className="w-10 h-10 object-contain" />
               <span className="font-bold text-lg text-foreground">Lumora</span>
             </div>
             <p className="text-foreground/60 text-sm mb-4">
@@ -129,7 +127,7 @@ export default function Footer() {
             &copy; {currentYear} Lumora Technologies. All rights reserved.
           </p>
           <div className="text-foreground/50 text-xs">
-            Made with <span className="text-primary">❤</span> by Lumora Team
+            Made by Lumora Team
           </div>
         </div>
       </div>
