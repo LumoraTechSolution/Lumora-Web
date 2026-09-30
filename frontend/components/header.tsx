@@ -30,21 +30,21 @@ export default function Header() {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-background/80 backdrop-blur-md border-b border-border'
-          : 'bg-transparent'
+          ? 'bg-background/90 backdrop-blur-md border-b border-border'
+          : 'bg-background/60 backdrop-blur-sm'
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <motion.div
-              className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-background font-bold text-lg"
+            <motion.img
+              src="/logo.png"
+              alt="Lumora Technologies logo"
+              className="w-10 h-10 object-contain"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-            >
-              L
-            </motion.div>
+            />
             <span className="hidden sm:inline font-bold text-lg text-foreground">
               Lumora
             </span>
@@ -69,9 +69,9 @@ export default function Header() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 rounded-lg bg-gradient-to-r from-primary to-accent text-background font-semibold text-sm hover:shadow-lg hover:shadow-primary/50 transition-all duration-200"
+              className="px-6 py-2 rounded-full bg-primary text-primary-foreground font-semibold text-sm shadow-md shadow-primary/25 hover:shadow-lg hover:shadow-primary/40 transition-all duration-200"
             >
-              Get Started
+              Get a Quote
             </motion.button>
           </div>
 
@@ -102,8 +102,8 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <button className="w-full px-4 py-2 rounded-lg bg-gradient-to-r from-primary to-accent text-background font-semibold text-sm mt-4">
-              Get Started
+            <button className="w-full px-4 py-2 rounded-full bg-primary text-primary-foreground font-semibold text-sm mt-4">
+              Get a Quote
             </button>
           </motion.div>
         )}
